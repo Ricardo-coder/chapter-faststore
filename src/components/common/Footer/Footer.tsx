@@ -12,6 +12,9 @@ import { mark } from 'src/sdk/tests/mark'
 import FooterLinks from './FooterLinks'
 
 function Footer() {
+  // eslint-disable-next-line no-console
+  console.log(process.env.SECRET)
+
   return (
     <footer className="footer layout__content-full">
       <IncentivesFooter />
