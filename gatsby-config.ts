@@ -23,6 +23,13 @@ const gatsbyConfig: GatsbyConfig = {
   plugins: [
     `gatsby-plugin-sass`,
     {
+      resolve: '@vtex/gatsby-source-cms',
+      options: {
+        workspace: 'chapter',
+        tenant: 'acctglobal',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'Fast Demo Store',
@@ -38,7 +45,7 @@ const gatsbyConfig: GatsbyConfig = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        resolveEnv: () => process.env.NODE_ENV || 'development',
+        resolveEnv: () => process.env.NODE_ENV ?? 'development',
         env: {
           production: {
             policy: [

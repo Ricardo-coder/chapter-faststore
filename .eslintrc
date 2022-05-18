@@ -3,7 +3,8 @@
   "root": true,
   "rules": {
     "react/prop-types": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": ["error", { "endOfLine": "auto"}, { "usePrettierrc": true }], 
   },
   "settings": {
     "react": {
